@@ -29,11 +29,16 @@ public class Main {
         System.out.println(list);                    // [Viraj, 2024, 2002, Viraj Dilshan, true, 50.75]
         System.out.println(list.size());            // 6
 
-        list.remove(2);                  // removes the value at the given index
-        System.out.println(list);             // [Viraj, 2024, Viraj Dilshan, true, 50.75]
+        Object removedValue = list.remove(2);               // captures the removed value   ->  2002
+        System.out.println("Deleted value: " + removedValue);    // Deleted value: 2002
+        System.out.println(list);                               // [Viraj, 2024, Viraj Dilshan, true, 50.75]
+
+        boolean isRemoved = list.remove("Viraj");             // stores the boolean value   ->  true
+        System.out.println("Is Viraj removed? " + isRemoved);   // Is Viraj removed? true
+        System.out.println(list);                              // [2024, Viraj Dilshan, true, 50.75]
 
         list.clear();
-        System.out.println(list);           // removes all the values
+        System.out.println(list);           // removes all the values   ->   []
 
         /* Object[] array = list.toArray();     ->      converts the list to an array */
     }
